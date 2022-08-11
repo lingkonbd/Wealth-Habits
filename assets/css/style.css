@@ -1,0 +1,391 @@
+*, *::before ,*::after{
+     box-sizing: border-box;
+     padding: 0;
+     margin: 0;
+ }
+ :root{
+     --primary-color: #E5CC7B;
+     --primary-white-color: #fff;
+     --primary-font-family: 'Poppins', sans-serif;
+     --secondary-color: #495258;
+     --secondary-bg: #495258;
+ }
+ img{
+     max-width: 100%;
+     height: auto;
+ }
+ body{
+     font-family:var(--primary-font-family);
+ }
+ a, a:hover { text-decoration: none }
+ a:focus { outline: 0 solid; text-decoration: none}
+ .primary-btn{
+     background: linear-gradient(180deg, #F4E69A 0%, #D1A951 100%);
+     border-radius: 15px;
+     display: inline-block;
+     height: 70px;
+     color: var(--secondary-color);
+     font-size: 20px;
+     font-weight: 600;
+     width: 242px;
+     text-align: center;
+     line-height: 70px;
+ }
+ .primary-btn span{
+     margin-left: 20px;
+ }
+
+ .hero-area{
+     background-color: #F3F3F3;
+     background-image: url(../img/hero-bg.png);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     min-height: 900px;
+ }
+
+ .wlc-content > span {
+     font-size: 21px;
+     line-height: 32px;
+     font-weight: 600;
+     letter-spacing: 0.135em;
+     position: relative;
+     padding-bottom: 12px;
+     margin-bottom: 10px;
+     display: inline-block;
+ }
+ 
+ .wlc-content > span::after {
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     height: 2px;
+     width: 100%;
+     content: "";
+     background: linear-gradient(180deg, #F4E69A 0%, #D1A951 100%);
+ }
+
+ .wlc-content h1 {
+     font-size: 156px;
+     text-transform: uppercase;
+     font-weight: 700;
+     font-family: 'Roboto Condensed', sans-serif;
+     line-height: 140px;
+     background: linear-gradient(180deg, #E8CB44 0%, #C79A56 100%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     background-clip: text;
+     text-fill-color: transparent;
+ }
+ 
+ .wlc-content p {
+     font-size: 35px;
+     line-height: 52px;
+     margin: 0;
+     color: var(--secondary-color);
+ }
+ 
+ .wlc-content p span {
+     font-weight: 600;
+ }
+
+ .button-groups {
+     display: inline-flex;
+     align-items: center;
+     margin-top: 55px;
+ }
+ 
+ .button-groups p {
+     margin: 0;
+     font-size: 22px;
+     line-height: 34px;
+     font-weight: 600;
+     margin-left: 30px;
+ }
+
+ .our-client-partner-area{
+     background: var(--secondary-bg);
+     padding: 50px 0;
+ }
+ .client-partner{
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: space-between;
+ }
+ .client-partner p {
+     margin: 0;
+     font-size: 27px;
+     font-weight: 600;
+     background: linear-gradient(180deg, #F4E69A 0%, #D1A951 100%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     background-clip: text;
+     text-fill-color: transparent;
+     height: 86px;
+     line-height: 82px;
+     width: 300px;
+     text-align: center;
+     border-top: 2px solid #D1A951;
+     border-bottom: 2px solid #D1A951;
+ }
+ .client-partner>div{
+     flex: 0 0 auto;
+ }
+ .client-partner>div a{
+     margin: 0px 30px;
+ }
+ .section-title h2{
+     color: #E5CC7B;
+     font-size: 64px;
+     line-height: 59px;
+     font-weight: 600;
+     text-transform: uppercase;
+     margin: 0;
+ }
+ .section-title h3 {
+     font-size: 53px;
+     line-height: 59px;
+     font-weight: 600;
+     color: var(--secondary-color);
+     margin: 0;
+ }
+ .section-title h3 span{
+     color: #E5CC7B;
+     font-weight: 700;
+     font-family: 'Roboto Condensed', sans-serif;
+ }
+ .access-bonus-resources-area {
+     padding: 85px 0;
+ }
+ .access-bonus-resources-area .row.mt-5 {
+     margin-top: 256px !important;
+ }
+
+ .single-book-team {
+     width: 100%;
+     max-width: 540px;
+ }
+ .single-book-team p {
+     margin: 10px 0 0;
+     text-align: center;
+     font-size: 20px;
+     line-height: 30px;
+     color: var(--secondary-color);
+ }
+ .book-team {
+     border: 3px solid #E5CC7B;
+     position: relative;
+     padding: 0 35px 35px;
+ }
+ .book-team .icon {
+     margin-top: -171px;
+     margin-bottom: 30px;
+ }
+ .book-team h3 {
+     font-size: 29px;
+     line-height: 44px;
+     font-weight: 500;
+     margin: 0;
+     color: var(--secondary-color);
+ }
+
+ .our-steps-area {
+     background: #F4F4F4;
+     padding: 180px 0 50px;
+     position: relative;
+ }
+ 
+ .our-steps-area::before, .our-steps-area::after {
+     clip-path: polygon(50% 100%, 0 0, 100% 0);
+     position: absolute;
+     left: 0;
+     top: 0;
+     height: 100px;
+     background: #fff;
+     content: "";
+     width: 100%;
+ }
+ 
+ .our-steps-area::after {
+     top: auto;
+     bottom: -100px;
+     background: #f4f4f4;
+ }
+ .our-steps-area .row.mt-5, .about-book-area .row.mt-5, .about-author-area .row.mt-5 {
+     margin-top: 85px !important;
+ }
+ .single-step {
+     width: 100%;
+     max-width: 540px;
+     min-height: 550px;
+     background: linear-gradient(180deg, #F4E69A 0%, #D1A951 100%);
+     padding: 50px 60px; 
+     position: relative;
+     z-index: 1;
+ }
+ 
+ .single-step::before {
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     width: calc(100% - 4px);
+     height: calc(100% - 4px);
+     background: #fff;
+     content: "";
+     transform: translate(-50%, -50%);
+     z-index: -1;
+ }
+ 
+ .single-step h3 {
+     font-size: 30px;
+     font-weight: 600;
+     line-height: 27px;
+     margin-bottom: 30px;
+     color: var(--secondary-color);
+ }
+ 
+ .single-step p {
+     font-size: 22px;
+     line-height: 33px;
+     margin: 0;
+     color: var(--secondary-color);
+ }
+ .client-link {
+     margin-top: 50px;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+ }
+ .client-link a {
+     background: var(--secondary-bg);
+     height: 80px;
+     display: block;
+     width: 190px;
+     padding: 0px 15px;
+     line-height: 80px;
+ }
+ .client-link a:not(:last-child) {
+     margin-bottom: 35px;
+ }
+ .contact-form {
+     margin: 30px 0 0;
+ }
+ .contact-form .form-control {
+     height: 50px;
+     border-color: #E5CC7B;
+     border-radius: 0px;
+     padding-left: 15px;
+     color: rgba(73, 82, 88, 0.3);
+ }
+ .contact-form .submit-btn{text-align: center;}
+ .contact-form .submit-btn input[type="submit"] {
+     border: 0px solid;
+     background: linear-gradient(180deg, #F4E69A 0%, #D1A951 100%);
+     border-radius: 15px;
+     height: 70px;
+     width: 216px;
+     font-size: 20px;
+     font-weight: 600;
+     display: block;
+     cursor: pointer;
+     margin: 0 auto;
+     color: var(--secondary-color);
+ }
+
+
+
+ .about-book-area{
+     padding: 188px 0 50px;   
+ }
+ .about-book {
+     max-width: 550px;
+ }
+ .about-book p {
+     font-size: 20px;
+     line-height: 36px;
+     color: var(--secondary-color);
+ }
+
+ .about-author-area {
+     background: #495258;
+     padding: 100px 0 75px;
+ }
+ .about-author-content {
+     border: 3px solid #D1A951;
+     padding: 50px 54px 25px;
+     min-height: 707px;
+     position: relative;
+     display: flex;
+ }
+ .about-author-content p {
+     max-width: 428px;
+     font-size: 20px;
+     line-height: 36px;
+     color: #fff;
+     margin: 0;
+ }
+ .author-image {
+     position: absolute;
+     right: -50px;
+     bottom: -32%;
+ }
+ .social-link {
+     display: flex;
+     align-items: center;
+     max-width: 550px;
+     width: 100%;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     margin-top: 65px;
+ }
+ .social-link p {
+     font-size: 27px;
+     margin: 0;
+     height: 80px;
+     line-height: 74px;
+     border-top: 2px solid #fff;
+     border-bottom: 2px solid #fff;
+     font-weight: 600;
+     background: linear-gradient(180deg, #F4E69A 0%, #D1A951 100%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     background-clip: text;
+     text-fill-color: transparent;
+     max-width: 286px;
+     text-align: center;
+     width: 280px;
+ }
+ .social-link div a {
+     display: inline-block;
+     margin-left: 16px;
+ }
+
+
+ .footer-area {
+     background: #3A4247;
+     padding: 50px;
+ }
+ .footer-link {
+     text-align: center;
+ }
+ .footer-link a {
+     display: inline-block;
+     font-size: 26px;
+     color: #fff;
+     letter-spacing: 0.085em;
+     padding: 0px 20px;
+     margin: 0 20px;
+     position: relative;
+ }
+ .footer-link a::before {
+     position: absolute;
+     left: -24px;
+     top: 50%;
+     height: calc(100% - 10%);
+     width: 1px;
+     background: #fff;
+     content: "";
+     transform: translateY(-50%);
+ }
+ .footer-link a:first-child::before{content: none;}
