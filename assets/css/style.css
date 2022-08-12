@@ -602,6 +602,10 @@
      text-decoration: none;
  }
 
+ .contact-form form.fsForm.fsMaxCol1{
+     width: inherit !important;
+ }
+
  /*
      Responsive css
  */
