@@ -641,7 +641,7 @@
      .single-book-team p {font-size: 16px;line-height: 25px;}
      .single-step { padding: 50px 40px;}
      .client-link a {width: 165px;}
-     .author-image {bottom: 2px;width: 500px;}
+     .author-image {bottom: 2px;width: 500px;right: -35px;}
      .footer-link a {font-size: 20px;margin: 0 20px;}
      .social-link { margin-left: auto;margin-right: auto;}
      .client-partner { display: block;text-align: center;}
@@ -679,7 +679,7 @@
      .about-book { max-width: 100%;text-align: center;}
      .about-author-content {padding: 50px 54px 0;min-height: auto; display: block;}
      .about-author-content p { max-width: 100%;}
-     .author-image {position: static;}
+     .author-image {position: static;width: auto;}
      .social-link {margin-left: auto;margin-right: auto;}
      .footer-link a {font-size: 16px; padding: 5px 10px;margin: 0 5px;}
      .footer-link a::before {left: -9px;}
@@ -730,7 +730,7 @@
      /**/
      .access-bonus-resources-area, .about-author-area {padding: 50px 0;}
      .about-author-content {padding: 30px 30px 0px; min-height: auto;display: block;}
-     .author-image {position: static;}
+     .author-image {position: static;width: auto;}
      .social-link {display: block;text-align: center;margin-top: 40px;}
      .social-link div a:first-child{margin-left: 0;}
      .section-title h2 { font-size: 46px;line-height: 50px;}
@@ -802,7 +802,7 @@
      /**/
      .access-bonus-resources-area, .about-author-area {padding: 50px 0;}
      .about-author-content {padding: 30px 30px 0px; min-height: auto;display: block;}
-     .author-image {position: static;}
+     .author-image {position: static;width: auto;}
      .social-link {display: block;text-align: center;margin-top: 40px;}
      .social-link div a:first-child{margin-left: 0;}
      .section-title h2 { font-size: 46px;line-height: 50px;}
