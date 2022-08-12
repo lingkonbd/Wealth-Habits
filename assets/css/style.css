@@ -611,6 +611,10 @@
      .book-team .icon {width: 290px; margin-left: auto; margin-right: auto;}
      .client-partner>div a {margin: 0px 20px;}
      .author-image {right: -102px; width: 724px;}
+     header.hero-area.d-flex.align-items-center {
+          min-height: auto;
+          height: 100vh;
+      }
 }
 
 
