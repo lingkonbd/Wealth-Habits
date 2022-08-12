@@ -30,9 +30,10 @@
      width: 242px;
      text-align: center;
      line-height: 70px;
+     transition: all 0.3s ease 0s;
  }
  .primary-btn span{
-     margin-left: 20px;
+     margin-left: 20px;transition: all 0.3s ease 0s;
  }
 
  .hero-area{
@@ -77,6 +78,27 @@
      background-clip: text;
      text-fill-color: transparent;
  }
+ .wlc-content h2.sub-heading {
+     font-weight: 300;
+     font-family: 'Roboto Condensed', sans-serif;
+     font-size: 118px;
+     line-height: 108px;
+     color: var(--secondary-color);
+     position: relative;
+     padding-bottom: 30px;
+     margin-bottom: 25px;
+     letter-spacing: 0.08em;
+ }
+ .wlc-content h2.sub-heading::before {
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     height: 2px;
+     max-width: 550px;
+     width: 100%;
+     background: linear-gradient(180deg, #F4E69A 0%, #D1A951 100%);
+     content: "";
+ }
  
  .wlc-content p {
      font-size: 35px;
@@ -84,15 +106,28 @@
      margin: 0;
      color: var(--secondary-color);
  }
+ .hero-area.inner-hero .wlc-content p{
+     font-size: 26px;
+     line-height: 39px;
+     font-weight: 500;
+ }
  
  .wlc-content p span {
      font-weight: 600;
  }
-
+ 
  .button-groups {
      display: inline-flex;
      align-items: center;
      margin-top: 55px;
+ }
+ .button-groups .primary-btn:hover, .contact-form .submit-btn input[type="submit"]:hover, 
+ .price-button .primary-btn:hover{
+     background: linear-gradient(180deg, #D1A951 0%, #F4E69A 100%);
+     color: var(--secondary-color);
+ }
+ .button-groups .primary-btn:hover span{
+     margin-left: 10px;
  }
  
  .button-groups p {
@@ -129,12 +164,29 @@
      border-top: 2px solid #D1A951;
      border-bottom: 2px solid #D1A951;
  }
+ .client-partner p span {
+     margin-left: 15px;
+ }
  .client-partner>div{
      flex: 0 0 auto;
  }
- .client-partner>div a{
-     margin: 0px 30px;
+ .client-partner>div a> img, .client-link a {
+     -webkit-transform: perspective(1px) translateZ(0);
+     transform: perspective(1px) translateZ(0);
+     -webkit-transition-duration: 0.3s;
+     transition-duration: 0.3s;
+     -webkit-transition-property: transform;
+     transition-property: transform;
+     -webkit-transition-timing-function: ease-out;
+     transition-timing-function: ease-out;
  }
+
+.client-partner>div a{
+     margin: 0px 30px;
+ } 
+ .client-partner>div a> img{filter: brightness(0) invert(1);}
+ .client-partner>div a:hover> img, .client-link a:hover{filter:none;-webkit-transform: translateY(-5px);
+     transform: translateY(-5px);}
  .section-title h2{
      color: #E5CC7B;
      font-size: 64px;
@@ -155,8 +207,10 @@
      font-weight: 700;
      font-family: 'Roboto Condensed', sans-serif;
  }
+ 
  .access-bonus-resources-area {
      padding: 85px 0;
+     position: relative;
  }
  .access-bonus-resources-area .row.mt-5 {
      margin-top: 256px !important;
@@ -264,7 +318,9 @@
      width: 190px;
      padding: 0px 15px;
      line-height: 80px;
+     transition: all 0.3s ease 0s;
  }
+ .client-link a:hover{background: var(--primary-color);}
  .client-link a:not(:last-child) {
      margin-bottom: 35px;
  }
@@ -291,14 +347,42 @@
      cursor: pointer;
      margin: 0 auto;
      color: var(--secondary-color);
+     transition: all 0.3s ease 0s;
  }
-
-
-
+ .bulk-discount p {
+     font-size: 20px;
+     color: var(--secondary-color);
+     margin: 0;
+ }
+ .bulk-discount p a{
+     text-decoration: underline;
+     color: var(--primary-color);
+     transition: all 0.3s ease 0s;
+ }
+ .bulk-discount p a:hover{
+     text-decoration: none;
+ }
+ .arrow-down {
+     background: url(../img/arrow-down.svg);
+     height: 57.21px;
+     width: 22.23px;
+     background-repeat: no-repeat;
+     position: absolute;
+     left: 50%;
+     transform: translateX(-50%);
+     bottom: -13.7%;
+     z-index: 9;
+ }
+ .our-steps-area .arrow-down {
+     bottom: -12.3%;
+ }
  .about-book-area{
      padding: 188px 0 50px;   
+     position: relative;
  }
+
  .about-book {
+     width: 100%;
      max-width: 550px;
  }
  .about-book p {
@@ -356,9 +440,19 @@
      text-align: center;
      width: 280px;
  }
+ .social-link p span{
+     margin-left: 15px;
+ }
  .social-link div a {
      display: inline-block;
      margin-left: 16px;
+ }
+ .social-link div a img {
+     filter: brightness(0) invert(1);
+     transition: all 0.3s ease 0s;
+ }
+ .social-link div a:hover img{
+     filter: none;
  }
 
 
@@ -377,6 +471,10 @@
      padding: 0px 20px;
      margin: 0 20px;
      position: relative;
+     transition: all 0.3s ease 0s;
+ }
+ .footer-link a:hover{
+     color: var(--primary-color);
  }
  .footer-link a::before {
      position: absolute;
@@ -389,3 +487,336 @@
      transform: translateY(-50%);
  }
  .footer-link a:first-child::before{content: none;}
+
+
+.our-price-table-area{
+     padding: 90px 0;
+}
+
+ .single-price-table {
+     padding: 33px 40px 50px;
+     border: 2px solid #E5CC7B;
+ }
+ 
+ .single-price-table:not(:last-child) {
+     margin-bottom: 40px;
+ }
+ 
+ .price-table-top{
+     width: 100%;
+     max-width: 269px;
+     margin: 0 auto;
+ }
+ .price-table-top h2 {
+     font-size: 29px;
+     line-height: 43px;
+     font-weight: 400;
+     color: var(--secondary-color);
+ }
+ .price-table-top h2 span{
+     color: var(--primary-color);
+     font-weight: 700;
+ }
+ .price-button p {
+     font-weight: 300;
+     font-style: italic;
+     line-height: 24px;
+     margin-bottom: 20px;
+ }
+ .price-button .primary-btn{
+     transition: all 0.3s ease 0s;
+ }
+ 
+ .price-table-content {
+     padding-left: 60px;
+ }
+
+ .price-table-content ul {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+ }
+ .price-table-content ul li {
+     position: relative;
+     padding-left: 62px;
+     font-size: 18px;
+     line-height: 29px;
+     color: var(--secondary-color);
+ }
+ .price-table-content ul li div strong{
+     font-weight: 600;
+ }
+ 
+ .price-table-content ul li span {
+     position: absolute;
+     left: 0;
+ }
+ 
+ 
+ 
+ .price-table-content ul li:not(:last-child) {
+     margin-bottom: 40px;
+ }
+ /**/
+ .footer-area.footer-v2{
+     padding: 70px 0 50px;
+ }
+
+ .footer-area.footer-v2 .client-partner {
+     width: 100%;
+     max-width: 1050px;
+     margin: 0 auto 60px;
+ }
+ .footer-area.footer-v2 .client-partner img{
+     filter: brightness(0) invert(1);
+ }
+ .footer-area.footer-v2 .client-partner a:hover img{
+     filter:none;
+ }
+
+ .footer-content.row.mt-5{
+     margin-bottom: 60px !important;
+ }
+ .footer-content h2 {
+     font-size: 32px;
+     line-height: 48px;
+     font-weight: 400;
+     margin: 0;
+     color: var(--primary-color);
+ }
+ .footer-cta{
+     padding-top: 30px;
+     border-top: 2px solid var(--primary-color);
+ }
+ .footer-cta p {
+     margin: 0;
+     font-size: 26px;
+     color: var(--primary-white-color);
+ }
+ .footer-cta p a{
+     color: var(--primary-color);
+     text-decoration: underline;
+     transition: all 0.3s ease 0s;
+ }
+ .footer-cta p a:hover{
+     text-decoration: none;
+ }
+
+ /*
+     Responsive css
+ */
+
+ @media  screen and (max-width: 1280px) {
+     .price-table-top h2 {font-size: 26px;line-height: 39px;}
+     .book-team .icon {width: 290px; margin-left: auto; margin-right: auto;}
+     .client-partner>div a {margin: 0px 20px;}
+     .author-image {right: -102px; width: 724px;}
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+     .hero-area { min-height: 720px;}
+     .wlc-content h1 {font-size: 110px;line-height: 104px;}
+     .wlc-content h2.sub-heading {font-size: 86px;line-height: 86px;}
+     .wlc-content h2.sub-heading::before {max-width: 490px;}
+     .hero-area.inner-hero .wlc-content p {padding-right: 10px;}
+     .hero-area.inner-hero .wlc-content p br {display: none;}
+     .footer-content h2 {font-size: 28px;}
+     .footer-area.footer-v2 .client-partner {max-width: 790px;}
+     .single-price-table .row .col-lg-9 {flex: 0 0 calc(100% - 280px);}
+     .single-price-table .row .col-lg-3 {flex: 0 0 280px;}
+
+     /**/
+     .section-title h3 {font-size: 48px;}
+     .book-team h3 {font-size: 26px;}
+     .book-team .icon {width: 270px;margin-left: auto;margin-right: auto;}
+     .single-book-team p {font-size: 16px;line-height: 25px;}
+     .single-step { padding: 50px 40px;}
+     .client-link a {width: 165px;}
+     .author-image {bottom: 2px;width: 500px;}
+     .footer-link a {font-size: 20px;margin: 0 20px;}
+     .social-link { margin-left: auto;margin-right: auto;}
+     .client-partner { display: block;text-align: center;}
+     .client-partner p {display: block;margin: 0 auto 40px;}
+
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+     .hero-area {min-height: auto;padding: 50px 0 60px;}
+     .wlc-content{text-align: center;}
+     .wlc-content h1 {font-size: 114px;line-height: 106px;}
+     .wlc-content h2.sub-heading {font-size: 85px;line-height: 85px; margin-bottom: 0;}
+     .wlc-content h2.sub-heading::before{content: none;}
+     .hero-image{display: none;}
+     .wlc-content img.d-none {display: block !important;width: 450px;margin-left: 24%;margin-bottom: 30px;}
+     .hero-area.inner-hero .wlc-content p {padding-top: 35px;border-top: 1px solid var(--primary-color);margin-top: 40px;}
+     .price-table-top h2 { margin-bottom: 25px;}
+     .price-table-content {padding-left: 0;margin-top: 50px;}
+
+     /**/
+     img.d-none.hero-home { display: block !important; width: 450px; margin-left: 26%; margin-top: 30px;}
+     .button-groups {display: flex; justify-content: center;}
+     .client-partner {display: block;text-align: center;}
+     .client-partner p {margin: 0 auto 40px;}
+     .section-title h3 br {display: none;}
+     .book-team .icon {margin-top: -150px;width: 260px; margin-left: auto;margin-right: auto;}
+     .single-book-team, .single-step { margin: 0 auto;}
+     .access-bonus-resources-area .row.mt-5 {margin-top: 210px !important;}
+     .access-bonus-resources-area .row.mt-5 .col-lg-6:not(:last-child) { margin-bottom: 196px;}
+     .our-steps-area .row.mt-5 .col-lg-6:not(:last-child) { margin-bottom: 50px;}
+     .arrow-down { bottom: -8.7%;}
+     .our-steps-area .arrow-down {bottom: -7.8%;}
+     .book-cover {text-align: center;}
+     .about-book { max-width: 100%;text-align: center;}
+     .about-author-content {padding: 50px 54px 0;min-height: auto; display: block;}
+     .about-author-content p { max-width: 100%;}
+     .author-image {position: static;}
+     .social-link {margin-left: auto;margin-right: auto;}
+     .footer-link a {font-size: 16px; padding: 5px 10px;margin: 0 5px;}
+     .footer-link a::before {left: -9px;}
+     .section-title h2 {font-size: 50px;line-height: 55px;}
+     .section-title h3 {font-size: 44px;line-height: 56px;}
+     .client-partner>div a {
+          margin: 5px 15px;
+          display: inline-block;
+          width: 133px;
+      }
+}
+
+
+@media only screen and (min-width: 576px) and (max-width: 767px)  {
+     .hero-area {min-height: auto;padding: 50px 0 60px;}
+     .wlc-content{text-align: center;}
+     .wlc-content h1 {font-size: 86px;line-height: 86px;}
+     .wlc-content h2.sub-heading {font-size: 66px;line-height: 56px;margin-bottom: 0;}
+     .wlc-content h2.sub-heading::before{content: none;}
+     .wlc-content img.d-none{display: block !important;width: 290px;margin-left: 30%;}
+     .hero-image, .hero-area.inner-hero .wlc-content p br {display: none;}
+     .hero-area.inner-hero .wlc-content p {font-size: 20px;line-height: 30px;padding: 0 15px;margin-top: 25px;padding-top: 25px; border-top: 1px solid var(--primary-color);}
+     .our-price-table-area {padding: 50px 0;}
+     .single-price-table {padding: 33px 20px 50px;}
+     .price-table-top h2 {font-size: 26px;line-height: 40px;margin-bottom: 30px;}
+     .price-table-content { padding-left: 0;margin-top: 50px;}
+     .price-table-content ul li {padding-left: 0;text-align: center;font-size: 17px;}
+     .price-table-content ul li span {position: static;margin-bottom: 15px;display: inline-block;}
+     .footer-content h2 {font-size: 27px;line-height: 40px;padding: 0 5px;}
+     .footer-area.footer-v2 {padding: 50px 0;}
+     .footer-area.footer-v2 .client-partner {display: block;text-align: center;}
+     .footer-area.footer-v2 .client-partner a {display: block;}
+     .footer-area.footer-v2 .client-partner a:not(:last-child) {margin-bottom: 33px;}
+     .footer-cta p {font-size: 22px;}
+
+     /**/
+     .wlc-content > span {font-size: 14px;line-height: 16px;}
+     .wlc-content p {font-size: 30px;line-height: 44px;}
+     img.d-none.hero-home { display: block !important; width: 350px; margin-left: 30%; margin-top: 30px;}
+     .client-partner {display: block;text-align: center;}
+     .client-partner p, .social-link p {font-size: 24px;width: 290px;margin: 0 auto 40px;height: 70px;line-height: 66px;}
+     .button-groups { display: block;margin-top: 40px;text-align: center;}
+     .button-groups p {margin-left: 0px;margin-top: 12px;}
+     .client-partner a:not(:last-child) {margin-bottom: 26px;display: block;}
+     .our-steps-area .row.mt-5, .about-book-area .row.mt-5, .about-author-area .row.mt-5 {
+          margin-top: 45px !important;
+      }
+     /**/
+     .access-bonus-resources-area, .about-author-area {padding: 50px 0;}
+     .about-author-content {padding: 30px 30px 0px; min-height: auto;display: block;}
+     .author-image {position: static;}
+     .social-link {display: block;text-align: center;margin-top: 40px;}
+     .social-link div a:first-child{margin-left: 0;}
+     .section-title h2 { font-size: 46px;line-height: 50px;}
+     .our-steps-area::after { bottom: -55px;}
+     .arrow-down {height: 57.21px;bottom: -11.2%;}
+     .our-steps-area .arrow-down {bottom: -5.3%;}
+     .section-title h3 {font-size: 33px;line-height: 45px;}
+     .section-title h3 br {display: none;}
+     .book-team .icon { margin-top: -118px;width: 195px;margin-left: auto;margin-right: auto;}
+     .access-bonus-resources-area .row.mt-5 {margin-top: 165px !important;}
+     .book-team h3 {font-size: 22px;line-height: 36px;}
+     .single-book-team p {font-size: 15px;line-height: 25px;}
+     .single-step { padding: 50px 20px; min-height: auto;}
+     .client-link a { width: 160px;padding: 0px 14px;}
+     .client-link a:not(:last-child) {margin-bottom: 20px;}
+     .our-steps-area .row.mt-5 .col-lg-6:not(:last-child) { margin-bottom: 50px;}
+     .our-steps-area::after {height: 55px;}
+     .footer-link a {font-size: 12px;padding: 5px 10px;margin: 0;}
+
+     /**/
+     .access-bonus-resources-area .row.mt-5 .col-lg-6:not(:last-child) {
+          margin-bottom: 160px;
+      }
+      .client-link {
+          display: block;
+          text-align: center;
+      }
+      .client-link a {
+          display: inline-block;
+          margin: 0 10px;
+      }
+
+}
+
+@media (max-width: 575px) {
+     .hero-area {min-height: auto;padding: 50px 0 60px;}
+     .wlc-content{text-align: center;}
+     .wlc-content h1 {font-size: 86px;line-height: 86px;}
+     .wlc-content h2.sub-heading {font-size: 66px;line-height: 56px;margin-bottom: 0;}
+     .wlc-content h2.sub-heading::before, .footer-link a::before{content: none;}
+     .wlc-content img.d-none{display: block !important;width: 290px;margin-left: auto;}
+     .hero-image, .hero-area.inner-hero .wlc-content p br, .single-book-team p {display: none;}
+     .hero-area.inner-hero .wlc-content p {font-size: 20px;line-height: 30px;padding: 0 15px;margin-top: 25px;padding-top: 25px; border-top: 1px solid var(--primary-color);}
+     .our-price-table-area {padding: 50px 0;}
+     .single-price-table {padding: 33px 20px 50px;}
+     .price-table-top h2 {font-size: 26px;line-height: 40px;margin-bottom: 30px;}
+     .price-table-content { padding-left: 0;margin-top: 50px;}
+     .price-table-content ul li {padding-left: 0;text-align: center;font-size: 17px;}
+     .price-table-content ul li span {position: static;margin-bottom: 15px;display: inline-block;}
+     .footer-content h2 {font-size: 27px;line-height: 40px;padding: 0 5px;}
+     .footer-area.footer-v2 {padding: 50px 0;}
+     .footer-area.footer-v2 .client-partner {display: block;text-align: center;}
+     .footer-area.footer-v2 .client-partner a {display: block;}
+     .footer-area.footer-v2 .client-partner a:not(:last-child) {margin-bottom: 33px;}
+     .footer-cta p {font-size: 22px;}
+
+     /**/
+     .wlc-content > span {font-size: 14px;line-height: 16px;}
+     .wlc-content p {font-size: 30px;line-height: 44px;}
+     img.d-none.hero-home { display: block !important; width: 290px; margin-left: 20%; margin-top: 30px;}
+     .client-partner {display: block;text-align: center;}
+     .client-partner p, .social-link p {font-size: 24px;width: 290px;margin: 0 auto 40px;height: 70px;line-height: 66px;}
+     .button-groups { display: block;margin-top: 40px;text-align: center;}
+     .button-groups p {margin-left: 0px;margin-top: 12px;}
+     .client-partner a:not(:last-child) {margin-bottom: 26px;display: block;}
+     .our-steps-area .row.mt-5, .about-book-area .row.mt-5, .about-author-area .row.mt-5 {
+          margin-top: 45px !important;
+      }
+     /**/
+     .access-bonus-resources-area, .about-author-area {padding: 50px 0;}
+     .about-author-content {padding: 30px 30px 0px; min-height: auto;display: block;}
+     .author-image {position: static;}
+     .social-link {display: block;text-align: center;margin-top: 40px;}
+     .social-link div a:first-child{margin-left: 0;}
+     .section-title h2 { font-size: 46px;line-height: 50px;}
+     .our-steps-area::after { bottom: -55px;}
+     .arrow-down {height: 57.21px;bottom: -12.7%;}
+     .our-steps-area .arrow-down {bottom: -5.3%;}
+     .section-title h3 {font-size: 33px;line-height: 45px;}
+     .book-team .icon { margin-top: -118px;width: 195px;margin-left: auto;margin-right: auto;}
+     .access-bonus-resources-area .row.mt-5 {margin-top: 165px !important;}
+     .book-team h3 {font-size: 22px;line-height: 36px;}
+     .single-book-team p {font-size: 15px;line-height: 25px;}
+     .single-step { padding: 50px 20px; min-height: auto;}
+     .client-link a { width: 160px;padding: 0px 14px;}
+     .client-link a:not(:last-child) {margin-bottom: 20px;}
+     .our-steps-area .row.mt-5 .col-lg-6:not(:last-child) { margin-bottom: 50px;}
+     .our-steps-area::after {height: 55px;}
+     .footer-link a {font-size: 12px;padding: 5px 10px;margin: 0;}
+
+     /**/
+     .access-bonus-resources-area .row.mt-5 .col-lg-6:not(:last-child) {
+          margin-bottom: 160px;
+      }
+
+      
+}
