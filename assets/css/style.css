@@ -617,7 +617,7 @@
      .author-image {right: -102px; width: 724px;}
      header.hero-area.d-flex.align-items-center {
           min-height: auto;
-          height: 100vh;
+          padding: 80px 0;
       }
 }
 
